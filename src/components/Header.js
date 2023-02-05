@@ -1,24 +1,26 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import About from "./About";
-import Projects from "./Projects";
-import Contact from "./Contact";
 
 function Header() {
     return (
       <header>
         <div>
-          <NavLink to="/About">
+          <NavLink to="/">
+            Home
+          </NavLink>
+        </div>
+        <div>
+          <NavLink to="/about">
             About
           </NavLink>
         </div>
         <div>
-          <NavLink to="/Projects">
+          <NavLink to="/projects">
             Projects
           </NavLink>
         </div>
         <div>
-          <NavLink to="/Contact">
+          <NavLink to="/contact">
             Contact
           </NavLink>
         </div>

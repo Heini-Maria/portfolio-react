@@ -1,18 +1,22 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
-import About from "./components/About"
+import About from "./components/About";
+import Projects from "./components/Projects"
+import Contact from "./components/Contact";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Header />
       <Routes>
-        <Route exact path="/" element={<Home/>}/>
-        <Route exact path="/About" element={<About/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
