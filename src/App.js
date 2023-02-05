@@ -1,18 +1,35 @@
-import React, { useState } from "react";
+import React from "react";
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 
-const App = () => {
-  const [counter, setCounter] = useState(0);
-
-  const increment = () => {
-    setCounter(counter + 1);
-  };
+function App() {
   return (
-    <div>
-      This was made from Scratch! Also hello world!
-      <button onClick={increment}>Increment</button>
-      {counter}
-    </div>
+    <BrowserRouter>
+      <header class="header">
+        <div>
+          <NavLink to="/About">
+            About
+          </NavLink>
+        </div>
+        <div>
+          <NavLink to="/Projects">
+            Projects
+          </NavLink>
+        </div>
+        <div>
+          <NavLink to="/Contact">
+            Contact
+          </NavLink>
+        </div>
+      </header>
+      <Routes>
+        <Route exact path="/"></Route>
+        <Route exact path="/About"></Route>
+        <Route exact path="/Projects"></Route>
+        <Route exact path="/Contact"></Route>
+      </Routes>
+      <Footer/>
+    </BrowserRouter>
   );
-};
+}
 
 export default App;
