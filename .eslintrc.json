@@ -13,8 +13,7 @@
         "ecmaVersion": "latest"
     },
     "plugins": [
-        "react",
-        "react-router-dom"
+        "react"
     ],
     "rules": {
         // allow .js files to contain JSX code
