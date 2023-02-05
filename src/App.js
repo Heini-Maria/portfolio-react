@@ -1,33 +1,17 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import About from "./components/About"
 
 function App() {
   return (
     <BrowserRouter>
-      <header class="header">
-        <div>
-          <NavLink to="/About">
-            About
-          </NavLink>
-        </div>
-        <div>
-          <NavLink to="/Projects">
-            Projects
-          </NavLink>
-        </div>
-        <div>
-          <NavLink to="/Contact">
-            Contact
-          </NavLink>
-        </div>
-      </header>
+      <Header />
       <Routes>
-        <Route exact path="/"></Route>
-        <Route exact path="/About"></Route>
-        <Route exact path="/Projects"></Route>
-        <Route exact path="/Contact"></Route>
+        <Route exact path="/" element={<Home/>}/>
+        <Route exact path="/About" element={<About/>}/>
       </Routes>
-      <Footer/>
     </BrowserRouter>
   );
 }
