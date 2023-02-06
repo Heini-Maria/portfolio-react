@@ -2,8 +2,8 @@ import React from "react";
 
 function Home() {
   return (
-    <div>
-      <div>
+    <main className="home">
+      <div className="title">
         <h1>
           Hi, I'm Heini-Maria.<br />I am a frontend developer.</h1>
         <h2> ..with a marketing background.</h2>
@@ -13,7 +13,7 @@ function Home() {
         <span id="time-container">0</span>
         hours since I started coding!
       </p>
-    </div>
+    </main>
   );
 }
 
