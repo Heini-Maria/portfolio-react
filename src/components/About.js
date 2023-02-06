@@ -1,8 +1,49 @@
 import React from "react";
+import me from "../../assets/images/about_image.jpg";
 
 function About() {
   return (
-    <div>I am About</div>
+    <section className="main about">
+      <img className="profile-pic" src={me} alt="" />
+      <section className="wrapper">
+        <div>
+          <h3>About</h3>
+          <div className="about-me">
+            <p className="">
+              My name is Heini-Maria Kotipelto and I love creating things that live on the internet.
+              My interest in web development started as a hobby when
+              I decided to try and create a webpage for my blog.
+              Although I was using a WordPress template and not coding the sites
+              by myself it kindled the spark to want to
+              learn more about how it is done from scratch.
+            </p>
+          </div>
+        </div>
+        <section>
+          <h3>Skills</h3>
+          <div className="skills">
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>...learning TypeScript</li>
+            </ul>
+            <ul className="frameworks">
+              <li>React</li>
+              <li>React Native</li>
+              <li>Redux</li>
+              <li>Nodejs</li>
+            </ul>
+            <ul>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Netlify</li>
+              <li>WordPress</li>
+            </ul>
+          </div>
+        </section>
+      </section>
+    </section>
   );
 }
 

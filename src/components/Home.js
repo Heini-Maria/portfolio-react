@@ -2,7 +2,7 @@ import React from "react";
 
 function Home() {
   return (
-    <main className="home">
+    <main className="home main">
       <div className="title">
         <h1>
           Hi, I'm Heini-Maria.<br />I am a frontend developer.</h1>
