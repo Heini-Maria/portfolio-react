@@ -3,7 +3,7 @@ import me from "../../assets/images/about_image.jpg";
 
 function About() {
   return (
-    <section className="main about">
+    <section className="main about" id="about">
       <img className="profile-pic" src={me} alt="" />
       <section className="wrapper">
         <div>
@@ -16,6 +16,12 @@ function About() {
               Although I was using a WordPress template and not coding the sites
               by myself it kindled the spark to want to
               learn more about how it is done from scratch.
+            </p>
+            <p>
+              Fast-forward to today,
+              and I successfully finished a course to become a Front-end Engineer.
+              My next goal is to get to build accessible,
+              inclusive products and digital experiences and work with real clients.
             </p>
           </div>
         </div>

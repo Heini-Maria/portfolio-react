@@ -2,7 +2,7 @@ import React from "react";
 
 function Home() {
   return (
-    <main className="home main">
+    <main className="home main" id="home">
       <div className="title">
         <h1>
           Hi, I'm Heini-Maria.<br />I am a frontend developer.</h1>
@@ -10,7 +10,7 @@ function Home() {
       </div>
       <p>
         Nerdy fact! It's been
-        <span id="time-container">0</span>
+        <span id="time-container"> 0 </span>
         hours since I started coding!
       </p>
     </main>

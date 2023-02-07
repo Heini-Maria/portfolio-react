@@ -104,7 +104,7 @@ p, a, li {
 .home>p {
     flex: 1;
 }
-.about {
+.about, .projects {
     background-color:  #0D1A21;
     color: whitesmoke;
     padding: 1rem 4rem;
@@ -138,19 +138,18 @@ p, a, li {
     margin-bottom: 1rem;
 }
 .about-me {
-    padding: 3rem 0rem;
+    border-radius: 10px;
+    border: 1px solid rgb(35, 56, 76);
+    box-shadow: 4px 6px 3px 3px rgb(35, 56, 76);
+    margin: 3rem 1rem;
 }
 
 .about-me>p {
     flex: 9;
     align-self: center;
-    padding: 2rem;
-    margin: 0rem 1rem;
-    border-radius: 10px;
-    border: 1px solid rgb(35, 56, 76);
-    box-shadow: 4px 6px 3px 3px rgb(35, 56, 76);
+    padding: 1rem;
 }
-.about-me>p:hover {
+.about-me:hover {
     transform: translateY(2px);
     box-shadow: 4px 4px 4px 3px rgb(18, 60, 80);
     border: 1px solid rgb(18, 60, 80);
@@ -170,7 +169,7 @@ p, a, li {
     border: 1px solid rgb(35, 56, 76);
     box-shadow: 4px 6px 3px 3px rgb(35, 56, 76);
     padding: 1rem;
-    margin: 1rem;
+    margin: 0rem 2.5rem;
 }
 .skills>ul:hover {
     transform: translateY(2px);
@@ -179,7 +178,7 @@ p, a, li {
 }
 .skills>.frameworks {
     align-self: flex-end;
-    margin: -3rem 1rem;
+    margin: -3rem 0rem;
 }
 .footer {
     background-color: #0D1A21;
