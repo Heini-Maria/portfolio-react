@@ -10,17 +10,17 @@ function Header() {
         </NavLink>
       </div>
       <div>
-        <NavLink to="/about">
+        <NavLink to="about">
           About
         </NavLink>
       </div>
       <div>
-        <NavLink to="/projects">
+        <NavLink to="projects">
           Projects
         </NavLink>
       </div>
       <div>
-        <NavLink to="/contact">
+        <NavLink to="contact">
           Contact
         </NavLink>
       </div>

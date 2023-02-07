@@ -18,7 +18,7 @@
     font-weight: normal;
 }
 * {
-   /* border: 1px solid red; */
+   border: 1px solid red;
    margin: 0px;
    padding: 0px;
    box-sizing: border-box;
@@ -54,16 +54,22 @@ h1 {
 }
 h2 {
     font-family: 'Work Sans', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     text-align: center;
 }
 h3 {
     font-family: 'Work Sans', sans-serif;
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     text-align: center;
     padding: 0;
 }
-p, a, li {
+p, a, li, button {
+    font-family: 'Noto Serif', serif;
+    text-align: center;
+    font-size: 1.2rem;
+    list-style: none;
+}
+a {
     font-family: 'Noto Serif', serif;
     text-align: center;
     font-size: 1.5rem;
@@ -179,6 +185,111 @@ p, a, li {
 .skills>.frameworks {
     align-self: flex-end;
     margin: -3rem 0rem;
+}
+.projects {
+    position: relative;
+    overflow: hidden;
+    padding:  2rem 0rem; 
+}
+
+.project-display {
+    display: flex;
+    width: 80%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    margin: 0px auto;
+}
+.project-display::-webkit-scrollbar {
+    display: none;
+}
+
+.pre-btn, 
+.nxt-btn {
+    border: none;
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0D1A21;
+    z-index: 9;
+}
+.nxt-btn {
+    right: 0;
+}
+.pre-btn {
+    left: 0;
+}
+.pre-btn img, 
+.nxt-btn img {
+    height: 3rem;
+    width: 3rem;
+    opacity: 0.4;
+}
+.pre-btn:hover img, 
+.nxt-btn:hover img{
+    opacity: 1;
+    border: none;
+}
+
+.project-card {
+    flex:  0 0 auto;
+    width: 30%;
+    height: 100%;
+    margin-right: 5rem;
+    border-radius: 10px;
+    border: 1px solid rgb(35, 56, 76);
+    box-shadow: 4px 6px 3px 3px rgb(35, 56, 76);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.project-card:hover {
+    transform: translateY(2px);
+    box-shadow: 4px 4px 4px 3px rgb(35, 56, 76);
+    border: 1px solid rgb(35, 56, 76);
+}
+.project-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+.project-card>button {
+    margin: 0.5rem 0.5rem 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(35, 56, 76);
+    color: whitesmoke;
+}
+.project-card>button.hide {
+    visibility: hidden;
+}
+.project-card>button:hover {
+    border: 1px solid whitesmoke;
+}
+.project-card>h3 {
+    padding: 1rem;
+}
+.project-card>p {
+    padding: 1rem;
+}
+.project-card>ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem 0rem;
+}
+.project-card>ul>li {
+    font-size: 1rem;
+    padding: 0.2rem;
+
 }
 .footer {
     background-color: #0D1A21;

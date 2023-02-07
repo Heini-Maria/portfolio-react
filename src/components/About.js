@@ -7,7 +7,7 @@ function About() {
       <img className="profile-pic" src={me} alt="" />
       <section className="wrapper">
         <div>
-          <h3>About</h3>
+          <h2>About</h2>
           <div className="about-me">
             <p className="">
               My name is Heini-Maria Kotipelto and I love creating things that live on the internet.
@@ -26,7 +26,7 @@ function About() {
           </div>
         </div>
         <section>
-          <h3>Skills</h3>
+          <h2>Skills</h2>
           <div className="skills">
             <ul>
               <li>HTML</li>
