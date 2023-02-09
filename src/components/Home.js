@@ -1,21 +1,6 @@
 import React, { useEffect } from "react";
 
 function Home() {
-  const timeContainer = document.getElementById("time-container");
-  const startDate = "10-03-2022";
-  const startDayDate = new Date(startDate);
-  const intlNumberFormatter = new Intl.NumberFormat("en-US");
-
-  setInterval(() => {
-    const now = new Date();
-    const difference = Math.floor((now.getTime() - startDayDate.getTime()) / 1000 / 60 / 60);
-
-    timeContainer.innerText = intlNumberFormatter.format(difference);
-  }, 1000);
-  useEffect(() => {
-    setInterval(1000);
-  }, []);
-
   return (
     <main className="home main" id="home">
       <div className="title">
