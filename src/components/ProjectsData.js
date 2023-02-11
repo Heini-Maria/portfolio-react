@@ -7,7 +7,7 @@ import project5 from "../../assets/images/static-website.png";
 export const projects = [
   {
     id: 1,
-    img: "../../assets/images/repeat.color.png",
+    img: project1,
     title: "React Native -Habit tracker",
     description: "This project was done as a final project in Codecademy Front-end Engineer Career pathThe goal of the project was to build an application that you are passionate about building. I love to challenge myself by learning new habits which take me closer to my goals. For that reason, I decided to build a simple habit tracker. This project gave me an opportunity to learn new technologies such as React Native and Expo.",
     skills: ["JavaScript", "React Native", "Expo", "AsyncStorage"],
@@ -16,7 +16,7 @@ export const projects = [
   },
   {
     id: 2,
-    img: "../../assets/images/react-reddit.png",
+    img: project2,
     title: "React Reddit client",
     description: "The purpose of this project was to create a minimalistic Reddit Client using React and Redux. Because of my love to DIY projects, I decided to devote the client for Sewing and Crafts subreddits. For making the application more visual I decided to only show the posts that has picture. This project made me to dive to the deep end. It was exciting walk trough the whole process from planning to deploying. In addition this project gave me better understanding how React and Redux work.",
     skills: ["CSS", "JavaScript", "React", "Redux"],
@@ -25,7 +25,7 @@ export const projects = [
   },
   {
     id: 3,
-    img: "../../assets/images/js-calculator.png",
+    img: project3,
     title: "JavaScript calculator",
     description: "The purpose for this assignment was to build a calculator application that would have functions for all of the basic math operators. This assignment good training with JavaScript and challenged my logical thinking while determining the edge cases and how to tackle them.",
     skills: ["CSS", "JavaScript", "keyboard support"],
@@ -34,7 +34,7 @@ export const projects = [
   },
   {
     id: 4,
-    img: "./responsive-website.png",
+    img: project4,
     title: "Responsive website",
     description: "The purpose of this assignment was to create a responsive website for an imaginary service. The styling and content of the page were not defined. This exercise gave me good practice with making the website responsive to different screen sizes.",
     skills: ["HTML", "CSS", "flexbox"],
@@ -43,7 +43,7 @@ export const projects = [
   },
   {
     id: 5,
-    img: "../../assets/images/static-website.png",
+    img: project5,
     title: "Static webpage",
     description: "The purpose of this assignment was to create a static multi-page website with CSS styling following the given design for the home page. The content and the other pages' styling were defined. This exercise gave me a lot of extra practice with CSS styling, especially using flexbox.",
     skills: ["HTML", "CSS", "flexbox"],

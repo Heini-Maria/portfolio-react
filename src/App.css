@@ -18,7 +18,7 @@
     font-weight: normal;
 }
 * {
-   border: 1px solid red;
+   /* border: 1px solid red; */
    margin: 0px;
    padding: 0px;
    box-sizing: border-box;
@@ -34,6 +34,7 @@ html {
 }
 
 body {
+    
     height: calc(100vh - 2rem);
     overflow: auto;
     background-image: url('../assets/images/pexels-nicole-avagliano-2706654.jpg');
@@ -74,24 +75,27 @@ a {
     text-align: center;
     font-size: 1.5rem;
     list-style: none;
+    color: whitesmoke;
+    text-decoration: none;
 }
 .header {
     display: flex;
     height: 100px;
-    justify-content: flex-end;
+    justify-content: center;
     padding: 1rem 4rem;
     align-items: center;
 }
 .header>div {
-    margin-left: 1rem;
+    margin-left: 1.2rem;
+}
+.active {
+    border: 1px solid whitesmoke;
+    padding: 0.25rem 0.5rem;
 }
 .main {
     flex: 1;
 }
-.header>div>* {
-   text-decoration: none;
-   color: whitesmoke;
-}
+
 .home {
     color: whitesmoke;
     display: flex;
@@ -110,7 +114,7 @@ a {
 .home>p {
     flex: 1;
 }
-.about, .projects {
+.about, .projects, .contact {
     background-color:  #0D1A21;
     color: whitesmoke;
     padding: 1rem 4rem;
@@ -122,7 +126,7 @@ a {
     width: 15rem;
     height: 15rem;
     border-radius: 50%;
-    opacity: 0.8;
+    opacity: 0.9;
     display: block;
     align-self: center;
     margin-bottom: -3rem;
@@ -144,9 +148,7 @@ a {
     margin-bottom: 1rem;
 }
 .about-me {
-    border-radius: 10px;
-    border: 1px solid rgb(35, 56, 76);
-    box-shadow: 4px 6px 3px 3px rgb(35, 56, 76);
+    border: 2px solid whitesmoke;
     margin: 3rem 1rem;
 }
 
@@ -154,11 +156,6 @@ a {
     flex: 9;
     align-self: center;
     padding: 1rem;
-}
-.about-me:hover {
-    transform: translateY(2px);
-    box-shadow: 4px 4px 4px 3px rgb(18, 60, 80);
-    border: 1px solid rgb(18, 60, 80);
 }
 
 .skills {
@@ -171,125 +168,167 @@ a {
 .skills>ul {
     flex: 1;
     width: 40%;
-    border-radius: 10px;
-    border: 1px solid rgb(35, 56, 76);
-    box-shadow: 4px 6px 3px 3px rgb(35, 56, 76);
+    border: 2px solid whitesmoke;
     padding: 1rem;
     margin: 0rem 2.5rem;
 }
-.skills>ul:hover {
-    transform: translateY(2px);
-    box-shadow: 4px 4px 4px 3px rgb(35, 56, 76);
-    border: 1px solid rgb(35, 56, 76);
-}
+
 .skills>.frameworks {
     align-self: flex-end;
-    margin: -3rem 0rem;
+    margin: -3.5rem 0rem;
 }
 .projects {
-    position: relative;
-    overflow: hidden;
-    padding:  2rem 0rem; 
+    padding: 1rem 0rem;
+    min-height: calc(100vh - 150px -2rem); 
+}
+.projects>h2 {
+    margin-top: 1rem;
 }
 
 .project-display {
+    width: 100%;
+    min-height: calc(80vh - 150px - 5rem);
+    padding: 2rem 2rem 0rem 2rem;
     display: flex;
-    width: 80%;
-    overflow-x: auto;
-    scroll-behavior: smooth;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: flex-start;
     margin: 0px auto;
 }
-.project-display::-webkit-scrollbar {
-    display: none;
+.project-card.selected {
+    border: 2px solid whitesmoke
 }
 
-.pre-btn, 
-.nxt-btn {
-    border: none;
-    width: 10%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0D1A21;
-    z-index: 9;
-}
-.nxt-btn {
-    right: 0;
-}
-.pre-btn {
-    left: 0;
-}
-.pre-btn img, 
-.nxt-btn img {
-    height: 3rem;
-    width: 3rem;
-    opacity: 0.4;
-}
-.pre-btn:hover img, 
-.nxt-btn:hover img{
-    opacity: 1;
-    border: none;
-}
-
-.project-card {
-    flex:  0 0 auto;
-    width: 30%;
-    height: 100%;
-    margin-right: 5rem;
-    border-radius: 10px;
-    border: 1px solid rgb(35, 56, 76);
-    box-shadow: 4px 6px 3px 3px rgb(35, 56, 76);
-    padding: 1rem;
+.isActive {
+    max-width: 50%;
+    min-height: calc(60vh - 150px);
+    padding: 0 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    justify-content: space-between;
+}
+.isActive .project-img {
+    width: 60%;
+    height: auto
 }
 
+.project-card {
+   max-width: 100%;
+   min-height: calc((80vh - 150px - 2rem) / 5);
+   display: flex;
+   margin-bottom: 0.5rem;
+   border: 2px solid transparent;
+}
 .project-card:hover {
     transform: translateY(2px);
-    box-shadow: 4px 4px 4px 3px rgb(35, 56, 76);
-    border: 1px solid rgb(35, 56, 76);
+    border: 2px solid whitesmoke;
+}
+
+.project-card>section {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.project-card>.project-hero {
+    width: 40%;
 }
 .project-img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 0.5rem;
+    width: auto;
+    height: calc((75vh - 150px - 2rem) / 5);
 }
-.project-card>button {
-    margin: 0.5rem 0.5rem 0.25rem;
+.project-card>section>h3 {
+    font-size: 1.1rem;
+}
+
+.isActive>div>button {
     padding: 0.25rem 0.5rem;
+    margin-bottom: 0.25rem;
     border: none;
+    margin-right: 1rem;
     border-radius: 10px;
     background-color: rgb(35, 56, 76);
+    border: 1px solid transparent;
     color: whitesmoke;
 }
-.project-card>button.hide {
-    visibility: hidden;
+
+.isActive>div>button>a {
+    font-size: 1.2rem;
 }
-.project-card>button:hover {
+.isActive>div {
+    display: flex;
+}
+
+.isActive>div>button:hover {
     border: 1px solid whitesmoke;
 }
-.project-card>h3 {
-    padding: 1rem;
+.isActive>h3 {
+    padding: 0.5rem;
+    font-size: 1.2rem;
 }
-.project-card>p {
-    padding: 1rem;
+.isActive>p {
+    padding: 0.5rem;
+    font-size: 1rem;
 }
-.project-card>ul {
+.project-card>section>ul,
+.isActive>ul {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 1rem 0rem;
 }
-.project-card>ul>li {
+.isAvtive>ul {
+    padding: 1rem 0;
+}
+.project-card>section>ul>li,
+.isActive>ul>li {
     font-size: 1rem;
     padding: 0.2rem;
-
+}
+.contact {
+    min-height: calc(100vh - 150px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 0rem; 
+}
+.contact>h2 {
+    margin: 1rem;
+}
+.contact>p {
+    margin: 2rem;
+    font-size: 1.8rem;
+}
+.contact>section {
+    min-height: 40vh;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+.contact-container-a,
+.contact-container-b {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 40%;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 2px solid whitesmoke;
+}
+.contact-container-a>*,
+.contact-container-b>* {
+    text-align: left;
+    padding: 0.25rem;
+}
+.contact-container-a>p>*,
+.contact-container-b>p>*{
+    border: 1px solid transparent;
+}
+.contact a:hover {
+    border: 1px solid whitesmoke;
 }
 .footer {
     background-color: #0D1A21;
