@@ -3,9 +3,20 @@ import { useState } from "react";
 
 function Project({ projects }) {
   const [isActive, setIsActive] = useState(0);
+  const [animate, setAnimate] = useState(false);
+
+  const handleClick = (index) => {
+    setIsActive(index);
+    const element = document.getElementById("active");
+
+    element.classList.remove("isActive"); // reset animation
+    void element.offsetWidth; // trigger reflow
+    element.classList.add("isActive");
+  };
+
   return (
     <div className="project-display">
-      <div className="isActive">
+      <div className="isActive" id="active">
         <img className="project-img" src={projects[isActive].img} alt={projects[isActive].title} />
         <div>
           <button type="button">
@@ -34,7 +45,7 @@ function Project({ projects }) {
       </div>
       <div>
         {projects.map((project, index) => (
-          <div className={index === isActive? "selected project-card" : "project-card"} onClick={() => setIsActive(index)}>
+          <div className={index === isActive? "selected project-card" : "project-card"} onClick={() => handleClick(index)}>
             <section className="project-hero">
               <img className="project-img" src={project.img} alt={project.title} />
             </section>
