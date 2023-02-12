@@ -3,7 +3,6 @@ import { useState } from "react";
 
 function Project({ projects }) {
   const [isActive, setIsActive] = useState(0);
-  const [animate, setAnimate] = useState(false);
 
   const handleClick = (index) => {
     setIsActive(index);
