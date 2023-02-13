@@ -3,12 +3,13 @@ import { projects } from "./ProjectsData";
 import Project from "./Project";
 import { motion } from "framer-motion";
 
-function Projects() {
+function Projects({ variants }) {
   return (
     <motion.div
-      initial={{ width: "50%" }}
-      animate={{ width: "100%" }}
-      exit={{ x: window.innerWidth, transition: { duration: 0.3 } }}
+      variants={variants}
+      initial="hidden"
+      animate="visible"
+      transition={{ type: "ease", duration: 0.6 }}
     >
       <section className="projects main" id="projects">
         <h2>Projects</h2>

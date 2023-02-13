@@ -11,14 +11,18 @@ import Contact from "./Contact";
 import { AnimatePresence } from "framer-motion";
 
 function AnimatedRoutes() {
+  const variants = {
+    hidden: { opacity: 0.8, scale: 0.8 },
+    visible: { scale: 1, opacity: 1 },
+  };
   const location = useLocation();
   return (
-    <AnimatePresence mode="wait" initial="false">
+    <AnimatePresence initial={false} exitBeforeEnter>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<Home variants={variants} />} />
+        <Route path="/about" element={<About variants={variants} />} />
+        <Route path="/projects" element={<Projects variants={variants} />} />
+        <Route path="/contact" element={<Contact variants={variants} />} />
       </Routes>
     </AnimatePresence>
   );

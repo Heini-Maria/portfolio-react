@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
-function Home() {
+function Home({ variants }) {
   return (
     <motion.div
-      initial={{ width: "50%" }}
-      animate={{ width: "100%" }}
-      exit={{ x: window.innerWidth, transition: { duration: 0.3 } }}
+      variants={variants}
+      initial="hidden"
+      animate="visible"
+      transition={{ type: "ease", duration: 0.4 }}
     >
       <main className="home main" id="home">
         <div className="title">

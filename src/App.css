@@ -17,7 +17,7 @@
     font-weight: normal;
 }
 * {
-  /*  border: 1px solid red; */
+   border: 1px solid red;
    margin: 0px;
    padding: 0px;
    box-sizing: border-box;
@@ -80,17 +80,18 @@ a {
     padding: 0.25rem;
 }
 .header {
-    display: flex;
-    height: 100px;
-    justify-content: center;
-    padding-top: 2rem;
-    align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  padding-top: 2rem;
+  align-items: center;
+  overflow: hidden;
 }
 .header>div {
     margin-left: 1.2rem;
 }
 .active {
-    border-bottom: 2px solid whitesmoke;
+     border-bottom: 2px solid whitesmoke;
 }
 
 header>div>*::after {
@@ -118,6 +119,7 @@ header>div>*:hover::after {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-height: calc(100vh - 150px);
 }
 .home>.title {
     display: flex;
@@ -138,6 +140,7 @@ header>div>*:hover::after {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    min-height: calc(100vh - 150px);
 }
 .profile-pic {
     width: 15rem;
@@ -147,13 +150,9 @@ header>div>*:hover::after {
     display: block;
     align-self: center;
     margin-bottom: -3rem;
-    box-shadow: 4px 6px 3px 3px rgb(35, 56, 76);
+    border: 12px solid rgba(18, 60, 80, 0.7);
 }
-.profile-pic:hover {
-    transform: translateY(2px);
-    box-shadow: 4px 4px 4px 3px rgb(18, 60, 80);
-    border: 1px solid rgb(18, 60, 80);
-}
+
 .wrapper {
     display: flex;
 }
@@ -168,10 +167,10 @@ header>div>*:hover::after {
 .about-me {
     border: 2px solid whitesmoke;
     margin: 3rem 1rem;
-    -webkit-animation: slideIn 1.6s ease-out both;
-    -moz-animation: slideIn 1.6s ease-out both;
-    -o-animation: slideIn 1.6s ease-out both;
-    animation: slideIn 1.6s ease-out both;
+    -webkit-animation: slideIn 1.6s ease-out 0.2s both;
+    -moz-animation: slideIn 1.6s ease-out 0.2s both;
+    -o-animation: slideIn 1.6s ease-out 0.2s both;
+    animation: slideIn 1.6s ease-out 0.2s both;
 }
 
 .about-me>p {
@@ -186,10 +185,10 @@ header>div>*:hover::after {
     justify-content: center;
     align-items: flex-start;
     padding: 3rem 0rem;
-    -webkit-animation: slideIn 1.6s ease-out both;
-    -moz-animation: slideIn 1.6s ease-out both;
-    -o-animation: slideIn 1.6s ease-out both;
-    animation: slideIn 1.6s ease-out both;
+    -webkit-animation: slideIn 1.6s ease-out 0.2s both;
+    -moz-animation: slideIn 1.6s ease-out 0.2s both;
+    -o-animation: slideIn 1.6s ease-out 0.2s both;
+    animation: slideIn 1.6s ease-out  0.2s both;
 }
 
 .skills>ul {
@@ -206,7 +205,7 @@ header>div>*:hover::after {
 }
 .projects {
     padding: 1rem 0rem;
-    min-height: calc(100vh - 150px -2rem); 
+    min-height: calc(100vh - 150px);
 }
 .projects>h2 {
     margin-top: 1rem;
@@ -221,7 +220,7 @@ header>div>*:hover::after {
     justify-content: space-evenly;
     align-items: flex-start;
     margin: 0px auto;
-    animation: hideScroll 1.6s;
+    animation: hideScroll 1.6s; 
 }
 
 @keyframes hideScroll{
@@ -245,10 +244,10 @@ header>div>*:hover::after {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    -webkit-animation: fadeIn 1.3s both;
-    -moz-animation: fadeIn 1.3s both;
-    -o-animation: fadeIn 1.3s both;
-    animation: fadeIn 1.3s both;
+    -webkit-animation: fadeIn 1.3s 0.4s both;
+    -moz-animation: fadeIn 1.3s 0.4s both;
+    -o-animation: fadeIn 1.3s 0.4s both;
+    animation: fadeIn 1.3s 0.4s both;
 }
 
 @-webkit-keyframes fadeIn {
@@ -307,10 +306,10 @@ header>div>*:hover::after {
    margin-bottom: 0.5rem;
    padding: 0.25rem;
    border: 2px solid transparent;
-   -webkit-animation: slideIn 1.6s ease-out both;
-   -moz-animation: slideIn 1.6s ease-out both;
-   -o-animation: slideIn 1.6s ease-out both;
-   animation: slideIn 1.6s ease-out both;
+   -webkit-animation: slideIn 1.6s ease-out 0.2s both;
+   -moz-animation: slideIn 1.6s ease-out 0.2s both;
+   -o-animation: slideIn 1.6s ease-out 0.2s both;
+   animation: slideIn 1.6s ease-out 0.2s both;
 }
 
 
@@ -361,7 +360,9 @@ header>div>*:hover::after {
 .project-card:hover {
     transform: translateY(2px);
     border: 2px solid whitesmoke;
+    overflow: hidden;
 }
+
 
 .project-card>section {
     width: 60%;
@@ -377,6 +378,47 @@ header>div>*:hover::after {
     width: auto;
     height: calc((75vh - 150px - 2rem) / 5);
 }
+.project-hero > .project-img:hover {
+    animation: scaleIn 0.4s ease-out both;
+}
+
+@keyframes scaleIn {
+    0% {
+        scale: 1;
+    }
+    100% {
+        scale: 1.25;
+    }
+}
+
+@-webkit-keyframes scaleIn {
+    0% {
+        scale: 1;
+    }
+    100% {
+        scale: 1.25;
+    } 
+}
+
+@-o-keyframes scaleIn {
+    0% {
+        scale: 1;
+    }
+    100% {
+        scale: 1.25;
+    }
+}
+
+@-moz-keyframes scaleIn {
+    0% {
+        scale: 1;
+    }
+    100% {
+        scale: 1.25;
+    }
+}
+
+
 .project-card>section>h3 {
     font-size: 1.1rem;
 }
@@ -426,7 +468,6 @@ header>div>*:hover::after {
     padding: 0.2rem;
 }
 .contact {
-    min-height: calc(100vh - 150px);
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -502,4 +543,102 @@ header>div>*:hover::after {
 }
 .footer>p {
     font-size: 1rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .profile-pic {
+    margin-bottom: 1rem;
+  }
+  .wrapper {
+    flex-direction: column;
+  }
+  .skills {
+    padding: 2rem;
+  }
+  .skills>ul {
+    margin: 0;
+  }
+  .project-display {
+    min-width: 100%;
+    padding: 1rem;
+  }
+  .project-display:nth-child(2) {
+    max-width: 60%;
+  }
+  .project-card>.project-hero {
+    display: none;
+  }
+  .project-card>section {
+    width: 100%;
+  }
+  .isActive {
+    max-width: 40%;
+  }
+  .isActive .project-img {
+    width: 100%;
+  }
+  .isActive>div {
+    flex-direction: column;
+  }
+  .isActive>div>button {
+    margin-right: 0;
+    margin-bottom: 0.25rem;
+  }
+   
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    margin: 1rem;
+  }
+
+  .header>div {
+    margin-left: 1rem;
+  }
+  
+  .home>.title {
+    justify-content: space-around;
+  }
+  a {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .home>div>h2 {
+    display: none;
+  }
+  .about {
+    padding: 1rem;
+  }
+  .wrapper>* {
+    margin: 0;
+  }
+  .about-me {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .skills {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0;
+  }
+
+  .skills>ul {
+    width: 100%;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+  .skills>.frameworks {
+    margin: 0;
+    align-self: flex-start;
+    margin-bottom: 1rem;
+  }
+  .footer>p {
+    font-size: 0.8rem;
+  }
 }

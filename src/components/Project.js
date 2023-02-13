@@ -1,15 +1,17 @@
 import React from "react";
 import { useState } from "react";
+import Modal from "./Modal";
 
 function Project({ projects }) {
+  const [showModal, setShowModal] = useState(false);
   const [isActive, setIsActive] = useState(0);
 
   const handleClick = (index) => {
     setIsActive(index);
     const element = document.getElementById("active");
 
-    element.classList.remove("isActive"); // reset animation
-    void element.offsetWidth; // trigger reflow
+    element.classList.remove("isActive");
+    void element.offsetWidth;
     element.classList.add("isActive");
   };
 
@@ -60,6 +62,10 @@ function Project({ projects }) {
                 ))
                }
               </ul>
+              <button className="modal-button" type="button" onClick={() => setShowModal(true)}>+</button>
+              {showModal ? (
+                <Modal />
+              ) : null}
             </section>
           </div>
         ))}

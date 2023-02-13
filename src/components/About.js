@@ -2,12 +2,13 @@ import React from "react";
 import me from "../../assets/images/about_image.jpg";
 import { motion } from "framer-motion";
 
-function About() {
+function About({ variants }) {
   return (
     <motion.div
-      initial={{ width: "50%" }}
-      animate={{ width: "100%" }}
-      exit={{ x: window.innerWidth, transition: { duration: 0.3 } }}
+      variants={variants}
+      initial="hidden"
+      animate="visible"
+      transition={{ type: "ease", duration: 0.6 }}
     >
       <section className="main about" id="about">
         <img className="profile-pic" src={me} alt="" />

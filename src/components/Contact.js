@@ -1,12 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-function Contact() {
+function Contact({ variants }) {
   return (
     <motion.div
-      initial={{ width: "50%" }}
-      animate={{ width: "100%" }}
-      exit={{ x: window.innerWidth, transition: { duration: 0.3 } }}
+      variants={variants}
+      initial="hidden"
+      animate="visible"
+      transition={{ type: "ease", duration: 0.6 }}
     >
       <div id="contact" className="contact">
         <h2>Contact</h2>

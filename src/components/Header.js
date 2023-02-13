@@ -5,22 +5,22 @@ function Header() {
   return (
     <header className="header">
       <div>
-        <NavLink activeClassName="active" to="/">
+        <NavLink activeclassname="active" to="/">
           Home
         </NavLink>
       </div>
       <div>
-        <NavLink activeClassName="active" to="about">
+        <NavLink activeclassname="active" to="about">
           About
         </NavLink>
       </div>
       <div>
-        <NavLink activeClassName="active" to="projects">
+        <NavLink activeclassname="active" to="projects">
           Projects
         </NavLink>
       </div>
       <div>
-        <NavLink activeClassName="active" to="contact">
+        <NavLink activeclassname="active" to="contact">
           Contact
         </NavLink>
       </div>
