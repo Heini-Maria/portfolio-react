@@ -370,6 +370,7 @@ header>div>*:hover::after {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 .project-card>.project-hero {
     width: 40%;
@@ -423,7 +424,8 @@ header>div>*:hover::after {
     font-size: 1.1rem;
 }
 
-.isActive>div>button {
+.isActive>div>button,
+.modal>div>button {
     padding: 0.25rem 0.5rem;
     margin-bottom: 0.25rem;
     border: none;
@@ -441,7 +443,8 @@ header>div>*:hover::after {
     display: flex;
 }
 
-.isActive>div>button:hover {
+.isActive>div>button:hover,
+.modal>div>button:hover {
     border: 1px solid whitesmoke;
 }
 .isActive>h3 {
@@ -453,7 +456,8 @@ header>div>*:hover::after {
     font-size: 1rem;
 }
 .project-card>section>ul,
-.isActive>ul {
+.isActive>ul,
+.modal>ul {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -462,6 +466,33 @@ header>div>*:hover::after {
 .isAvtive>ul {
     padding: 1rem 0;
 }
+.modal-button {
+  display: none;
+}
+.modal {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    position: absolute;
+    top: 140px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0D1A21;
+}
+.modal-header {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.modal-img {
+    width: 80%;
+    height: auto;
+}
+
 .project-card>section>ul>li,
 .isActive>ul>li {
     font-size: 1rem;
@@ -606,6 +637,10 @@ header>div>*:hover::after {
   h1 {
     font-size: 3rem;
   }
+  button,
+  button>a {
+    font-size: 1.5rem;
+  }
 
   .home>div>h2 {
     display: none;
@@ -637,6 +672,28 @@ header>div>*:hover::after {
     margin: 0;
     align-self: flex-start;
     margin-bottom: 1rem;
+  }
+  .isActive {
+    display: none;
+  }
+  .project-display {
+    flex-direction: row;
+  }
+  .project-card>.project-hero {
+    display: inline-block;
+  }
+  .modal-button {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 0.25rem;
+    border: none;
+    margin-right: 1rem;
+    border-radius: 10px;
+    background-color: rgb(35, 56, 76);
+    border: 1px solid transparent;
+    color: whitesmoke;
+    align-self: flex-end;
+    margin: 0.25rem;
   }
   .footer>p {
     font-size: 0.8rem;

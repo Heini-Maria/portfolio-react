@@ -15,8 +15,15 @@ function Project({ projects }) {
     element.classList.add("isActive");
   };
 
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
+
   return (
     <div className="project-display">
+      {showModal ? (
+        <Modal project={projects[isActive]} toggleModal={toggleModal} />
+      ) : null }
       <div className="isActive" id="active">
         <img className="project-img" src={projects[isActive].img} alt={projects[isActive].title} />
         <div>
@@ -62,10 +69,7 @@ function Project({ projects }) {
                 ))
                }
               </ul>
-              <button className="modal-button" type="button" onClick={() => setShowModal(true)}>+</button>
-              {showModal ? (
-                <Modal />
-              ) : null}
+              <button className="modal-button action-button" type="button" onClick={() => toggleModal()}>+</button>
             </section>
           </div>
         ))}
