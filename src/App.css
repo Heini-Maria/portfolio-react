@@ -482,10 +482,50 @@ header>div>*:hover::after {
     width: 100vw;
     height: 100vh;
     background-color: #0D1A21;
-    -webkit-animation: slideIn 1.6s ease-out 0.2s both;
-    -moz-animation: slideIn 1.6s ease-out 0.2s both;
-    -o-animation: slideIn 1.6s ease-out 0.2s both;
-    animation: slideIn 1.6s ease-out 0.2s both;
+    -webkit-animation: slideModal 1s ease-out 0.2s both;
+    -moz-animation: slideModal 1s ease-out 0.2s both;
+    -o-animation: slideModal 1s ease-out 0.2s both;
+    animation: slideModal 1s ease-out 0.2s both;
+}
+
+
+@-webkit-keyframes slideModal {
+    0% {
+        -webkit-transform: translateY(40vh);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-o-keyframes slideModal {
+    0% {
+        -o-transform: translateY(40vh);
+    }
+    100% {
+        -o-transform: translateY(0);
+    }
+}
+
+@-moz-keyframes slideModal {
+    0% {
+        -moz-transform: translateY(40vh);
+    }
+    100% {
+        -moz-transform: translateY(0);
+    }
+}
+
+@keyframes slideModal {
+    0% {
+        transform: translateY(40vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.action-button {
+    font-family: "work Sans", sans-serif;
 }
 .modal-header {
     display: flex;
