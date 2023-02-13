@@ -17,7 +17,7 @@
     font-weight: normal;
 }
 * {
-   border: 1px solid red;
+   /* border: 1px solid red; */
    margin: 0px;
    padding: 0px;
    box-sizing: border-box;
@@ -482,6 +482,10 @@ header>div>*:hover::after {
     width: 100vw;
     height: 100vh;
     background-color: #0D1A21;
+    -webkit-animation: slideIn 1.6s ease-out 0.2s both;
+    -moz-animation: slideIn 1.6s ease-out 0.2s both;
+    -o-animation: slideIn 1.6s ease-out 0.2s both;
+    animation: slideIn 1.6s ease-out 0.2s both;
 }
 .modal-header {
     display: flex;
@@ -678,6 +682,9 @@ header>div>*:hover::after {
   }
   .project-display {
     flex-direction: row;
+  }
+  .project-card.selected {
+    border: 2px solid transparent;
   }
   .project-card>.project-hero {
     display: inline-block;
