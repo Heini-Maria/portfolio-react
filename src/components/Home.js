@@ -2,6 +2,11 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
 function Home({ variants }) {
+  const startDate = "10-03-2022";
+  const startDayDate = new Date(startDate);
+  const now = new Date();
+  const difference = Math.floor((now.getTime() - startDayDate.getTime()) / 1000 / 60 / 60);
+
   return (
     <motion.div
       variants={variants}
@@ -17,7 +22,9 @@ function Home({ variants }) {
         </div>
         <p>
           Nerdy fact! It's been
-          <span id="time-container"> 0 </span>
+          <span id="time-container">
+            {` ${difference} `}
+          </span>
           hours since I started coding!
         </p>
       </main>
