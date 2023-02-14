@@ -1,26 +1,30 @@
 import React from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { MdClose } from 'react-icons/md';
+import { FiMenu } from 'react-icons/fi';
 
 function Header() {
+  const [navBar, setNavBar] = useState(false);
   return (
     <header className="header">
-      <div>
-        <NavLink activeclassname="active" to="/">
+      <button type="button">
+        <FiMenu onClick={() => setNavBar(true)} className="menu-icon" />
+      </button>
+      <div className={navBar ? "nav-open" : "menu-items"}>
+        <button type="button">
+          <MdClose onClick={() => setNavBar(false)} className="close-icon" />
+        </button>
+        <NavLink onClick={() => setNavBar(false)} activeclassname="active" to="/">
           Home
         </NavLink>
-      </div>
-      <div>
-        <NavLink activeclassname="active" to="about">
+        <NavLink onClick={() => setNavBar(false)} activeclassname="active" to="about">
           About
         </NavLink>
-      </div>
-      <div>
-        <NavLink activeclassname="active" to="projects">
+        <NavLink onClick={() => setNavBar(false)} activeclassname="active" to="projects">
           Projects
         </NavLink>
-      </div>
-      <div>
-        <NavLink activeclassname="active" to="contact">
+        <NavLink onClick={() => setNavBar(false)} activeclassname="active" to="contact">
           Contact
         </NavLink>
       </div>

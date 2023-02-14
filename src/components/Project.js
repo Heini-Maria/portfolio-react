@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Modal from "./Modal";
+import { MdArrowCircleUp } from 'react-icons/md';
 
 function Project({ projects }) {
   const [showModal, setShowModal] = useState(false);
@@ -67,9 +68,11 @@ function Project({ projects }) {
                     {skill}
                   </li>
                 ))
-               }
+                  }
               </ul>
-              <button className="modal-button action-button" type="button" onClick={() => toggleModal()}>+</button>
+              <button className="modal-button action-button" type="button" onClick={() => toggleModal()}>
+                <MdArrowCircleUp className="menu-icon" />
+              </button>
             </section>
           </div>
         ))}

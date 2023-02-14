@@ -1,14 +1,17 @@
 import React from "react";
+import { MdClose } from 'react-icons/md';
 
 function Modal({ project, toggleModal }) {
   return (
     <div>
       <div className="modal">
         <div className="modal-header">
-          <button className="action-button" onClick={() => toggleModal()}> X </button>
+          <button type="button" className="modal-button" onClick={() => toggleModal()}>
+            <MdClose className="close-icon" />
+          </button>
         </div>
         <img className="modal-img" src={project.img} alt={project.title} />
-        <div>
+        <div className="modal-buttons">
           <button type="button">
             <a href={project.preview} target="_blank" rel="noreferrer" title="link to the project">
               Preview

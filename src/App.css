@@ -30,15 +30,12 @@ html {
     --color-dark: #0D1A21;
     --color-accent: rgb(35, 56, 76);
 }
-
 #root {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-
-body {
-    
+body { 
     height: calc(100vh - 2rem);
     overflow: auto;
     background-image: url('../assets/images/pexels-nicole-avagliano-2706654.jpg');
@@ -82,33 +79,44 @@ a {
     color: var(--color-white);
     text-decoration: none;
     border-bottom: 2px solid transparent;
-    padding: 0.25rem;
 }
 .header {
-  display: flex;
-  height: 100px;
-  justify-content: center;
-  padding-top: 2rem;
-  align-items: center;
-  overflow: hidden;
+    height: 100px;
+    padding-top: 2rem;
+
 }
-.header>div {
+.header button {
+    display: none;
+}
+.menu-icon {
+    font-size: 2.5rem;
+}
+.menu-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.menu-items>* {
     margin-left: 1.2rem;
 }
 .active {
-     border-bottom: 2px solid var(--color-white);
+    border-bottom: 2px solid var(--color-white);
 }
-header>div>*::after {
+.close-icon {
+    font-size: 2rem;
+}
+.menu-items>*::after {
     content: "";
     display: block;
-    margin-top: 4px;
+    margin-top: 2px;
     margin-left: auto;
     margin-right: auto;
     height: 2px;
     width: 0px;
     background-color: var(--color-white);
 }
-header>div>*:hover::after {
+.menu-items>*:hover::after {
     width: 100%;
     transition: all 0.4s;
 }
@@ -416,7 +424,7 @@ header>div>*:hover::after {
     height: auto
 }
 .isActive>div>button,
-.modal>div>button {
+.modal-buttons>button {
     padding: 0.25rem 0.5rem;
     margin-bottom: 0.25rem;
     border: none;
@@ -424,7 +432,7 @@ header>div>*:hover::after {
     border-radius: 10px;
     background-color: var(--color-accent);
     border: 1px solid transparent;
-    color: whitesmoke;
+    color: var(--color-white);
 }
 .isActive>div>button>a {
     font-size: 1.2rem;
@@ -454,10 +462,9 @@ header>div>*:hover::after {
     align-items: center;
     justify-content: space-between;
     z-index: 10;
-    position: absolute;
-    top: 140px;
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100vw;
     height: 100vh;
     background-color: var(--color-dark);
     -webkit-animation: slideModal 1s ease-out 0.2s both;
@@ -643,8 +650,83 @@ header>div>*:hover::after {
   main {
     margin: 1rem;
   }
-  .header>div {
-    margin-left: 1rem;
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+  }
+  .header button {
+    display: inline;
+    background-color: var(--color-dark);
+    border: none;
+  }
+  .header>button {
+    color: var(--color-white);
+    margin-right: 1rem;
+    background-color: transparent;
+  }
+  .menu-items {
+    display: none;
+  }
+  .nav-open {
+    z-index: 10;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    padding: 1rem;
+    background-color: var(--color-dark);
+    -webkit-animation: slideMenu 0.7s ease-out  both;
+    -moz-animation: slideMenu 0.7s ease-out both;
+    -o-animation: slideMenu 0.7s ease-out both;
+    animation: slideMenu 0.7s ease-out  both;
+}
+@-webkit-keyframes slideMenu {
+    0% {
+        -webkit-transform: translateY(-40vh);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+    }
+}
+@-o-keyframes slideMenu {
+    0% {
+        -o-transform: translateY(-40vh);
+    }
+    100% {
+        -o-transform: translateY(0);
+    }
+}
+@-moz-keyframes slideMenu {
+    0% {
+        -moz-transform: translateY(-40vh);
+    }
+    100% {
+        -moz-transform: translateY(0);
+    }
+}
+@keyframes slideMenu {
+    0% {
+        transform: translateY(-40vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+  .nav-open>* {
+    color: var(--color-white);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .nav-open>button {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .active {
+    border-bottom: none;
   }
   .home>.title {
     justify-content: space-around;
@@ -694,6 +776,9 @@ header>div>*:hover::after {
   .project-display {
     flex-direction: row;
   }
+  .project-card {
+    margin-top: 1rem;
+  }
   .project-card.selected {
     border: 2px solid transparent;
   }
@@ -702,16 +787,11 @@ header>div>*:hover::after {
   }
   .modal-button {
     display: inline-block;
-    padding: 0.25rem 0.5rem;
-    margin-bottom: 0.25rem;
+    background-color: var(--color-dark);
     border: none;
-    margin-right: 1rem;
-    border-radius: 10px;
-    background-color: var(--color-accent);
-    border: 1px solid transparent;
     color: var(--color-white);
-    align-self: flex-end;
-    margin: 0.25rem;
+    align-self: center;
+    margin-top: 0.25rem;
   }
   .footer>p {
     font-size: 0.8rem;
