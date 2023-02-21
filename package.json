@@ -20,6 +20,7 @@
     "@babel/runtime": "^7.20.13",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^9.1.2",
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.3",
     "eslint": "^8.33.0",
     "eslint-config-airbnb": "^19.0.4",
