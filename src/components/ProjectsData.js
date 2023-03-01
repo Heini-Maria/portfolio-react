@@ -3,8 +3,18 @@ import project2 from "../../assets/images/react-reddit.png";
 import project3 from "../../assets/images/js-calculator.png";
 import project4 from "../../assets/images/responsive-website.png";
 import project5 from "../../assets/images/static-website.png";
+import project0 from "../../assets/images/nerdy-facts.png"
 
 export const projects = [
+  {
+    id: 0,
+    img: project0,
+    title: "React & Express -Microblog",
+    description: "Personal full stack project to practise rest APIs and to understand the relationship between back- and front-end. The react application is created from scratch, using webpack. Nerdy Facts is a microblogging platform that allows logged-in users to create new posts, and delete and edit them. Users can also like and comment on posts created by other users.",
+    skills: ["JavaScript", "React", "Express", "rest API", "mySQL"],
+    preview: "https://sunny-cascaron-e5deb2.netlify.app/",
+    github: "https://github.com/Heini-Maria/blog-app.git",
+  },
   {
     id: 1,
     img: project1,
@@ -17,7 +27,7 @@ export const projects = [
   {
     id: 2,
     img: project2,
-    title: "React Reddit client",
+    title: "React -Reddit client",
     description: "The purpose of this project was to create a minimalistic Reddit Client using React and Redux. Because of my love to DIY projects, I decided to devote the client for Sewing and Crafts subreddits. For making the application more visual I decided to only show the posts that has picture. This project made me to dive to the deep end. It was exciting walk trough the whole process from planning to deploying. In addition this project gave me better understanding how React and Redux work.",
     skills: ["CSS", "JavaScript", "React", "Redux"],
     preview: "https://cosmic-kringle-9deec8.netlify.app/",
