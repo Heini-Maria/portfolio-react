@@ -3,7 +3,7 @@ import project2 from "../../assets/images/react-reddit.png";
 import project3 from "../../assets/images/js-calculator.png";
 import project4 from "../../assets/images/responsive-website.png";
 import project5 from "../../assets/images/static-website.png";
-import project0 from "../../assets/images/nerdy-facts.png"
+import project0 from "../../assets/images/nerdy-facts.png";
 
 export const projects = [
   {
