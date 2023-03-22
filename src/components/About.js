@@ -17,19 +17,20 @@ function About({ variants }) {
             <h2>About</h2>
             <div className="about-me">
               <p className="">
-                My name is Heini-Maria Kotipelto and I love
-                creating things that live on the internet.
-                My interest in web development started as a hobby when
-                I decided to try and create a webpage for my blog.
-                Although I was using a WordPress template and not coding the sites
-                by myself it kindled the spark to want to
-                learn more about how it is done from scratch.
+                My name is Heini-Maria Kotipelto, and I am passionate about bringing innovative
+                ideas to life on the internet. Initially, my interest in web development was
+                sparked as a hobby when I set out to create a webpage for my blog.
+                Although I started by using a WordPress template,
+                I quickly became enamored with the process and wanted to delve deeper into
+                the mechanics of coding from scratch.
               </p>
               <p>
-                Fast-forward to today,
-                and I successfully finished a course to become a Front-end Engineer.
-                My next goal is to get to build accessible,
-                inclusive products and digital experiences and work with real clients.
+                Today, I am proud to say that I have successfully completed a course to
+                become a Front-end Engineer and gaining
+                valuable experience as an Design and Development Intern at Valletta Soft.
+                My ambition is to work collaboratively with clients to build digital experiences
+                that are accessible and inclusive,
+                making technology more available to all individuals.
               </p>
             </div>
           </div>
@@ -40,13 +41,15 @@ function About({ variants }) {
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>JavaScript</li>
-                <li>...learning TypeScript</li>
+                <li>... learning TypeScript & PHP</li>
               </ul>
               <ul className="frameworks">
                 <li>React</li>
                 <li>React Native</li>
                 <li>Redux</li>
                 <li>Nodejs</li>
+                <li>Express</li>
+                <li>Jest</li>
               </ul>
               <ul>
                 <li>Git</li>
