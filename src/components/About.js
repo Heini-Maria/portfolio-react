@@ -1,6 +1,7 @@
 import React from "react";
-import me from "../../assets/images/about_image.jpg";
 import { motion } from "framer-motion";
+import me from "../../assets/images/about_image2.jpg";
+
 
 function About({ variants }) {
   return (
@@ -25,12 +26,13 @@ function About({ variants }) {
                 the mechanics of coding from scratch.
               </p>
               <p>
-                Today, I am proud to say that I have successfully completed a course to
-                become a Front-end Engineer and gaining
-                valuable experience as an Design and Development Intern at Valletta Soft.
-                My ambition is to work collaboratively with clients to build digital experiences
-                that are accessible and inclusive,
-                making technology more available to all individuals.
+                Today, I am an enthusiastic Junior Frontend Developer with a solid foundation
+                in HTML, CSS, and JavaScript, and a passion for creating captivating web
+                applications using React and React Native. Skilled in web development and design,
+                I bring a unique blend of technical expertise and marketing background,
+                holding a bachelor's degree in business. Experienced in content creation, email
+                marketing campaigns, and a commitment to lifelong learning in the
+                ever-evolving tech industry.
               </p>
             </div>
           </div>
@@ -41,7 +43,8 @@ function About({ variants }) {
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>JavaScript</li>
-                <li>... learning TypeScript & PHP</li>
+                <li>SQL</li>
+                <li>TypeScript</li>
               </ul>
               <ul className="frameworks">
                 <li>React</li>
@@ -49,9 +52,11 @@ function About({ variants }) {
                 <li>Redux</li>
                 <li>Nodejs</li>
                 <li>Express</li>
+                <li>MySQL</li>
                 <li>Jest</li>
               </ul>
               <ul>
+                <li>Jira</li>
                 <li>Git</li>
                 <li>GitHub</li>
                 <li>Netlify</li>
