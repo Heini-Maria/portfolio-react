@@ -215,7 +215,6 @@ a {
     align-self: flex-end;
     margin: -3.5rem 0rem;
 }
-
 .projects {
     padding: 1rem 0rem;
     min-height: calc(100vh - 150px);
@@ -224,6 +223,7 @@ a {
 .projects>h2 {
     margin-top: 1rem;
 }
+
 .project-display {
     width: 100%;
     min-height: calc(80vh - 150px - 5rem);
