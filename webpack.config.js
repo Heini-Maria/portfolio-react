@@ -47,10 +47,4 @@ module.exports = {
       },
     ],
   },
-  loaders: [
-    {
-      test: /\.(jpe?g|png|webp)$/i,
-      loaders: ["webp-loader"],
-    },
-  ],
 };
