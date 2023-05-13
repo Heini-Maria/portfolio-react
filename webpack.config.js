@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const path = require("path");
 
@@ -15,6 +16,10 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new WebpackManifestPlugin({
+      writeToFileEmit: true,
+      seed: {},
+    }),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: path.resolve(__dirname, "src", "index.html"),
@@ -42,4 +47,10 @@ module.exports = {
       },
     ],
   },
+  loaders: [
+    {
+      test: /\.(jpe?g|png|webp)$/i,
+      loaders: ["webp-loader"],
+    },
+  ],
 };

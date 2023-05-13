@@ -1,7 +1,7 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { projects } from "./ProjectsData";
 import Project from "./Project";
-import { motion } from "framer-motion";
 
 function Projects({ variants }) {
   return (

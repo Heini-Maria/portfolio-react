@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 function Home({ variants }) {
@@ -17,7 +17,10 @@ function Home({ variants }) {
       <main className="home main" id="home">
         <div className="title">
           <h1>
-            Hi, I'm Heini-Maria.<br />I am a frontend developer.</h1>
+            Hi, I'm Heini-Maria.
+            <br />
+            I am a frontend developer.
+          </h1>
           <h2> ..with a marketing background.</h2>
         </div>
         <p>

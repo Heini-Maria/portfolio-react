@@ -3,18 +3,21 @@
     src: url('../assets/fonts/Ubuntu/Ubuntu-Regular.ttf');
     font-style: normal;
     font-weight: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'Work-sans';
     src: url('../assets/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf');
     font-style: normal;
     font-weight: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'Noto-serif';
     src: url('../assets/fonts/Noto_Serif/NotoSerif-Regular.ttf');
     font-style: normal;
     font-weight: normal;
+    font-display: swap;
 }
 * {
    /* border: 1px solid red; */
@@ -38,7 +41,7 @@ html {
 body { 
     height: calc(100vh - 2rem);
     overflow: auto;
-    background-image: url('../assets/images/pexels-nicole-avagliano-2706654.jpg');
+    background-image: url('../assets/images/pexels-nicole-avagliano-2706654.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

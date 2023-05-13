@@ -1,14 +1,10 @@
 import React from "react";
-import {
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import Home from "./Home";
 import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
-import { AnimatePresence } from "framer-motion";
 
 function AnimatedRoutes() {
   const variants = {
