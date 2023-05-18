@@ -22,6 +22,7 @@
     "babel-loader": "^9.1.2",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.3",
+    "dotenv-webpack": "^8.0.1",
     "eslint": "^8.33.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.27.5",
@@ -38,11 +39,14 @@
     "webpack-nano": "^1.1.1"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "formik": "^2.2.9",
     "framer-motion": "^9.0.2",
     "html-webpack-plugin": "^5.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
-    "react-router-dom": "^6.8.0"
+    "react-router-dom": "^6.8.0",
+    "yup": "^1.1.1"
   }
 }

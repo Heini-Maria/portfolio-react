@@ -16,13 +16,8 @@
         "react"
     ],
     "rules": {
-        // allow .js files to contain JSX code
         "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx", ".js", ".jsx"] }],
-        // prevent eslint to complain about the "styles" variable being used before it was defined
         "no-use-before-define": ["error", { "variables": false }],
-        // ignore errors for the react-navigation package
-        /* "react/prop-types": ["error", { "ignore": ["navigation", "navigation.navigate"] }], */
-        // ignore errors for import directives
         "import/extensions": [
           "error",
           "ignorePackages",
@@ -33,10 +28,16 @@
             "tsx": "never"
           }
         ],
+        "object-curly-newline": ["error", {
+          "ImportDeclaration": "never",
+          "ExportDeclaration": { "multiline": true, "minProperties": 3 }
+      }],
         "linebreak-style": 0,
         "no-console": "off",
         "import/prefer-default-export": "off",
         "quotes": [2, "double", { "avoidEscape": true }],
-        "react/prop-types": 0
-      }
+        "react/prop-types": 0,
+        "jsx-a11y/label-has-associated-control": "off",
+        "react/no-unescaped-entities": "off"
+      } 
 }

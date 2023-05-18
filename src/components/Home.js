@@ -8,26 +8,23 @@ function Home({ variants }) {
   const difference = Math.floor((now.getTime() - startDayDate.getTime()) / 1000 / 60 / 60);
 
   return (
-    <motion.div
-      variants={variants}
-      initial="hidden"
-      animate="visible"
-      transition={{ type: "ease", duration: 0.4 }}
-    >
+    <motion.div variants={variants} initial="hidden" animate="visible" transition={{ type: "ease", duration: 0.4 }}>
       <main className="home main" id="home">
-        <div className="title">
+        <motion.div
+          className="title"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ type: "easeInOut", duration: 1.2, delay: 0.6 }}
+        >
           <h1>
             Hi, I'm Heini-Maria.
-            <br />
-            I am a frontend developer.
+            <br />I am a frontend developer.
           </h1>
           <h2> ..with a marketing background.</h2>
-        </div>
+        </motion.div>
         <p>
           Nerdy fact! It's been
-          <span id="time-container">
-            {` ${difference} `}
-          </span>
+          <span id="time-container">{` ${difference} `}</span>
           hours since I started coding!
         </p>
       </main>

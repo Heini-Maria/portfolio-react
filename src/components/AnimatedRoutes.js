@@ -5,6 +5,7 @@ import Home from "./Home";
 import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import ThankyouPage from "./ThankyouPage";
 
 function AnimatedRoutes() {
   const variants = {
@@ -19,6 +20,7 @@ function AnimatedRoutes() {
         <Route path="/about" element={<About variants={variants} />} />
         <Route path="/projects" element={<Projects variants={variants} />} />
         <Route path="/contact" element={<Contact variants={variants} />} />
+        <Route path="/thankyou" element={<ThankyouPage variants={variants} />} />
       </Routes>
     </AnimatePresence>
   );

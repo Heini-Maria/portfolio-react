@@ -68,7 +68,7 @@ h3 {
     text-align: center;
     padding: 0;
 }
-p, a, li, button {
+p, a, li, button, label {
     font-family: 'Noto Serif', serif;
     text-align: center;
     font-size: 1.2rem;
@@ -83,10 +83,18 @@ a {
     text-decoration: none;
     border-bottom: 2px solid transparent;
 }
+.icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+.icon:hover {
+    transform: translateY(2px);
+    cursor: pointer;
+    color: var(--color-accent)
+}
 .header {
     height: 100px;
     padding-top: 2rem;
-
 }
 .header button {
     display: none;
@@ -123,11 +131,9 @@ a {
     width: 100%;
     transition: all 0.4s;
 }
-
 .main {
     flex: 1;
 }
-
 .home {
     color: var(--color-white);
     display: flex;
@@ -427,12 +433,11 @@ a {
     height: auto
 }
 .isActive>div>button,
-.modal-buttons>button {
+.modal-buttons>button,
+.contact-form>button {
     padding: 0.25rem 0.5rem;
     margin-bottom: 0.25rem;
-    border: none;
     margin-right: 1rem;
-    border-radius: 10px;
     background-color: var(--color-accent);
     border: 1px solid transparent;
     color: var(--color-white);
@@ -444,8 +449,10 @@ a {
     display: flex;
 }
 .isActive>div>button:hover,
-.modal>div>button:hover {
+.modal>div>button:hover,
+.contact-form>button:hover {
     border: 1px solid whitesmoke;
+    cursor: pointer;
 }
 .isActive>h3 {
     padding: 0.5rem;
@@ -536,54 +543,42 @@ a {
     margin: 2rem;
     font-size: 1.8rem;
 }
-.contact>section {
+.contact:nth-child(2) {
     min-height: 40vh;
     width: 80%;
     display: flex;
     justify-content: center;
 }
-.contact a {
-    overflow: hidden;
-    display: inline-block;
-    position: relative;
-    left: 0;
-    padding: 0.2em 0;
-}
-.contact a:after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background-color: var(--color-white);
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-}
-.contact-container-a,
-.contact-container-b {
+.contact-form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-self: center;
-    width: 45%;
-    margin: 1rem 0;
-    padding: 1rem;
-    border: 2px solid var(--color-white);
+    align-items: flex-start ;
+    gap: 0.5rem;
+    margin-top: 2rem;
 }
-.contact-container-a>*,
-.contact-container-b>* {
-    text-align: left;
+.form-field {
+    width: 40vw;
+    height: 2rem;
+    font-size: 1.2rem;
     padding: 0.25rem;
+    font-family: "Noto serif", serif;
+    background-color: var(--color-white);
 }
-.contact-container-a>p>*,
-.contact-container-b>p>*{
-    border: 1px solid transparent;
+.form-field[name="message"] {
+    height: 5rem;
 }
-.contact a:hover:after {
-    width: 100%; 
-    left: 0; 
+.contact-form>span {
+    height: 0.8rem;
+    color: red;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem; 
+}
+.contact-form>button {
+    align-self: center;
+    width: 25%;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
 }
 .footer {
     background-color: var(--color-dark);
@@ -598,7 +593,19 @@ a {
 .footer>p {
     font-size: 1rem;
 }
-
+.thank-you {
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 150px);
+}
+.thank-you h2 {
+    font-size: 4rem;
+}
+.thank-you p {
+    font-size: 3rem;
+}
 @media only screen and (max-width: 1024px) {
   .profile-pic {
     margin-bottom: 1rem;
@@ -638,15 +645,9 @@ a {
     margin-right: 0;
     margin-bottom: 0.25rem;
   }
-  .contact>section {
-    flex-direction: column;
-    width: 100%;
-  }
-  .contact-container-a,
-  .contact-container-b {
-    width: 80%;
-    margin: 0.25rem;
-  }
+  .contact-form>button {
+    width: 50%;
+}
 }
 
 @media screen and (max-width: 600px) {
@@ -798,5 +799,14 @@ a {
   }
   .footer>p {
     font-size: 0.8rem;
+  }
+  .form-field {
+    width: 80vw;
+  }
+  .thank-you h2 {
+    font-size: 3rem;
+  }
+  .thank-you p {
+    font-size: 2rem;
   }
 }

@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 const path = require("path");
 
 module.exports = {
@@ -15,6 +16,7 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
+    new Dotenv(),
     new CleanWebpackPlugin(),
     new WebpackManifestPlugin({
       writeToFileEmit: true,
