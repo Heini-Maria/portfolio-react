@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const webpack = require("webpack");
 /* const Dotenv = require("dotenv-webpack"); */
 const path = require("path");
 
@@ -16,7 +17,14 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
-/*     new Dotenv(), */
+    /*     new Dotenv(), */
+    new webpack.DefinePlugin({
+      "process.env": JSON.stringify({
+        REACT_APP_PUBLIC_KEY: process.env.REACT_APP_PUBLIC_KEY,
+        REACT_APP_SERVICE_ID: process.env.REACT_APP_SERVICE_ID,
+        REACT_APP_TEMPLATE_ID: process.env.REACT_APP_TEMPLATE_ID,
+      }),
+    }),
     new CleanWebpackPlugin(),
     new WebpackManifestPlugin({
       writeToFileEmit: true,
