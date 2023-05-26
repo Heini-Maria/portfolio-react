@@ -1,7 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Variants } from "./types";
 
-function Home({ variants }) {
+interface HomeProps {
+  variants: Variants;
+}
+
+function Home(props: HomeProps) {
+  const { variants } = props;
   const startDate = "10-03-2022";
   const startDayDate = new Date(startDate);
   const now = new Date();
@@ -18,7 +24,8 @@ function Home({ variants }) {
         >
           <h1>
             Hi, I'm Heini-Maria.
-            <br />I am a frontend developer.
+            <br />
+            I am a frontend developer.
           </h1>
           <h2> ..with a marketing background.</h2>
         </motion.div>

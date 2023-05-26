@@ -1,13 +1,14 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React, { useState } from "react";
 import { MdArrowCircleUp } from "react-icons/md";
+import { projects } from "./ProjectsData";
 import Modal from "./Modal";
 
-function Project({ projects }) {
+function Project() {
   const [showModal, setShowModal] = useState(false);
   const [isActive, setIsActive] = useState(0);
 
-  const handleClick = (index) => {
+  const handleClick = (index: number) => {
     setIsActive(index);
     const element = document.getElementById("active");
 

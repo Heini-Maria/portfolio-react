@@ -5,8 +5,14 @@ import emailjs from "@emailjs/browser";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { contactSchema } from "../helpers/contactValidation";
+import { Variants } from "./types";
 
-function Contact({ variants }) {
+interface ContactProps {
+  variants: Variants;
+}
+
+function Contact(props: ContactProps) {
+  const { variants } = props;
   const serviceID = process.env.REACT_APP_SERVICE_ID;
   const templateID = process.env.REACT_APP_TEMPLATE_ID;
   const publicKey = process.env.REACT_APP_PUBLIC_KEY;
@@ -27,7 +33,7 @@ function Contact({ variants }) {
       },
       (error) => {
         console.log(error.text);
-      }
+      },
     );
   };
 
@@ -37,7 +43,8 @@ function Contact({ variants }) {
         <h2>Contact</h2>
         <p>
           Have an interesting project or job opportunity?
-          <br />I would love to hear about it!
+          <br />
+          I would love to hear about it!
         </p>
         <section>
           <a href="https://github.com/Heini-Maria" target="_blank" rel="noreferrer">

@@ -16,28 +16,28 @@ function Header() {
         </button>
         <NavLink
           onClick={() => setNavBar(false)}
-          activeclassname="active"
+          className={({ isActive }) => (isActive ? "active" : "")}
           to="/"
         >
           Home
         </NavLink>
         <NavLink
           onClick={() => setNavBar(false)}
-          activeclassname="active"
+          className={({ isActive }) => (isActive ? "active" : "")}
           to="about"
         >
           About
         </NavLink>
         <NavLink
           onClick={() => setNavBar(false)}
-          activeclassname="active"
+          className={({ isActive }) => (isActive ? "active" : "")}
           to="projects"
         >
           Projects
         </NavLink>
         <NavLink
           onClick={() => setNavBar(false)}
-          activeclassname="active"
+          className={({ isActive }) => (isActive ? "active" : "")}
           to="contact"
         >
           Contact

@@ -1,9 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { projects } from "./ProjectsData";
 import Project from "./Project";
+import { Variants } from "./types";
 
-function Projects({ variants }) {
+interface ProjectsProps {
+  variants: Variants;
+}
+
+function Projects(props: ProjectsProps) {
+  const { variants } = props;
   return (
     <motion.div
       variants={variants}
@@ -13,7 +18,7 @@ function Projects({ variants }) {
     >
       <section className="projects main" id="projects">
         <h2>Projects</h2>
-        <Project projects={projects} />
+        <Project />
       </section>
     </motion.div>
   );
