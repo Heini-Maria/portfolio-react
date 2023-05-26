@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import me from "../../assets/images/about_image2-min.png";
+import me from "../../assets/images/about_image2.png";
 import { Variants } from "./types";
 
 interface AboutProps {
