@@ -1,7 +1,14 @@
 import React from "react";
 import { MdClose } from "react-icons/md";
+import { Project, toggleModalFunction } from "./types";
 
-function Modal({ project, toggleModal }) {
+interface ModalProps {
+  project: Project,
+  toggleModal: toggleModalFunction,
+}
+
+function Modal(props: ModalProps) {
+  const { project, toggleModal } = props;
   return (
     <div>
       <div className="modal">
@@ -40,7 +47,7 @@ function Modal({ project, toggleModal }) {
         <h3>{project.title}</h3>
         <p>{project.description}</p>
         <ul>
-          {project.skills.map((skill) => (
+          {project.skills.map((skill: string) => (
             <li>
               #
               {skill}

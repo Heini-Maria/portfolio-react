@@ -6,7 +6,7 @@ const webpack = require("webpack");
 const path = require("path");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/index.tsx",
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
@@ -38,7 +38,7 @@ module.exports = {
   ],
   resolve: {
     modules: [__dirname, "src", "node_modules"],
-    extensions: [".js", ".jsx", ".json", ".ts", ".css"],
+    extensions: [".js", ".jsx", ".json", ".ts", ".tsx", ".css"],
   },
   module: {
     rules: [
@@ -54,6 +54,14 @@ module.exports = {
       {
         test: /\.(jpg|svg|png|gif)$/,
         type: "asset/resource",
+      },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        loader: "ts-loader",
+        options: {
+          transpileOnly: true,
+        },
       },
     ],
   },

@@ -8,11 +8,12 @@ import Contact from "./Contact";
 import ThankyouPage from "./ThankyouPage";
 
 function AnimatedRoutes() {
+  const location = useLocation();
   const variants = {
     hidden: { opacity: 0.8, scale: 0.8 },
     visible: { scale: 1, opacity: 1 },
   };
-  const location = useLocation();
+
   return (
     <AnimatePresence initial={false} exitBeforeEnter>
       <Routes location={location} key={location.pathname}>
@@ -20,7 +21,7 @@ function AnimatedRoutes() {
         <Route path="/about" element={<About variants={variants} />} />
         <Route path="/projects" element={<Projects variants={variants} />} />
         <Route path="/contact" element={<Contact variants={variants} />} />
-        <Route path="/thankyou" element={<ThankyouPage variants={variants} />} />
+        <Route path="/thankyou" element={<ThankyouPage />} />
       </Routes>
     </AnimatePresence>
   );

@@ -1,8 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import me from "../../assets/images/about_image2-min.png";
+import { Variants } from "./types";
 
-function About({ variants }) {
+interface AboutProps {
+  variants: Variants;
+}
+
+function About(props: AboutProps) {
+  const { variants } = props;
   return (
     <motion.div
       variants={variants}
@@ -70,5 +76,4 @@ function About({ variants }) {
     </motion.div>
   );
 }
-
 export default About;
