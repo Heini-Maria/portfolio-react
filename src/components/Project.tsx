@@ -91,6 +91,7 @@ function Project() {
               <button
                 className="modal-button action-button"
                 type="button"
+                aria-label="Button Read More"
                 onClick={() => toggleModal()}
               >
                 <MdArrowCircleUp className="menu-icon" />
