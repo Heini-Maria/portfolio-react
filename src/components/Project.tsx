@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 import React, { useState } from "react";
 import { MdArrowCircleUp } from "react-icons/md";
 import { projects } from "./ProjectsData";

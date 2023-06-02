@@ -83,14 +83,21 @@ a {
     text-decoration: none;
     border-bottom: 2px solid transparent;
 }
+.icon-button {
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+}
 .icon {
     margin-right: 10px;
     font-size: 1.5rem;
+    text-align: center;
+    color: var(--color-white);
+    align-self: center;
 }
 .icon:hover {
-    transform: translateY(2px);
+    transform: scale(1.1);
     cursor: pointer;
-    color: var(--color-accent)
 }
 .header {
     height: 100px;
@@ -569,7 +576,7 @@ a {
 }
 .contact-form>span {
     height: 0.8rem;
-    color: red;
+    color: #e34b49;
     font-size: 1.2rem;
     margin-bottom: 0.5rem; 
 }
