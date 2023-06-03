@@ -12,7 +12,7 @@ export const projects = [
     title: "React & Express -Microblog",
     description:
       "Personal full stack project to practise rest APIs and to understand the relationship between back- and front-end. The react application is created from scratch, using webpack. Nerdy Facts is a microblogging platform that allows logged-in users to create new posts, and delete and edit them. Users can also like and comment on posts created by other users.",
-    skills: ["JavaScript", "React", "Express", "rest API", "mySQL"],
+    skills: ["JavaScript", "React", "Redux", "Express", "rest API", "mySQL"],
     preview: "https://sunny-cascaron-e5deb2.netlify.app/",
     github: "https://github.com/Heini-Maria/blog-app.git",
   },
